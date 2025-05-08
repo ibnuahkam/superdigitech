@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './home/home';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import BackToTop from './components/BackToTop';
+import Teknologi from './teknologi/teknologi';
 
 // Tambahkan komponen loading
 const LoadingScreen = ({ onFinish }) => {
@@ -74,6 +75,7 @@ function App() {
         <div className="App">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/Technology" element={<Teknologi />} />
           </Routes>
           <FloatingWhatsApp />
           <BackToTop />
