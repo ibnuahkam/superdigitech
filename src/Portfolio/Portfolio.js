@@ -15,73 +15,74 @@ const Portfolio = () => {
   const totalPages = Math.ceil(data.length / itemsPerPage);
 
   const styles = {
-    container: {
-      maxWidth: '1000px',
-      margin: '0 auto',
-      padding: '40px 20px',
-      fontFamily: 'Arial, sans-serif',
-      marginTop: '80px',
-    },
-    heading: {
-      textAlign: 'center',
-      fontSize: '16px',
-      fontWeight: 'bold',
-      marginBottom: '30px',
-      color: '#1a1a1a',
-    },
-    grid: {
-      display: 'flex',
-      gap: '20px',
-      flexWrap: 'wrap',
-      justifyContent: 'center',
-    },
-    card: {
-      width: '400px',
-      display: 'flex',
-      flexDirection: 'column',
-      boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-      borderRadius: '8px',
-      overflow: 'hidden',
-      cursor: 'pointer',
-      backgroundColor: '#fff',
-      transition: 'transform 0.2s',
-    },
-    image: {
-      width: '100%',
-      height: '200px',
-      objectFit: 'contain',
-      display: 'block',
-    },
-    content: {
-      padding: '16px',
-    },
-    title: {
-      fontSize: '18px',
-      fontWeight: 'bold',
-      marginBottom: '8px',
-    },
-    desc: {
-      fontSize: '14px',
-      color: '#555',
-    },
-    pagination: {
-      marginTop: '30px',
-      display: 'flex',
-      justifyContent: 'center',
-      gap: '10px',
-    },
-    pageButton: {
-      padding: '8px 14px',
-      border: '1px solid #ccc',
-      background: '#fff',
-      cursor: 'pointer',
-      borderRadius: '4px',
-    },
-    activePage: {
-      background: '#007BFF',
-      color: '#fff',
-    },
-  };
+  container: {
+    maxWidth: '1000px',
+    margin: '0 auto',
+    padding: '40px 20px',
+    fontFamily: 'Arial, sans-serif',
+    marginTop: '80px',
+  },
+  heading: {
+    textAlign: 'center',
+    fontSize: '16px',
+    fontWeight: 'bold',
+    marginBottom: '30px',
+    color: '#1a1a1a',
+  },
+  grid: {
+    display: 'grid',  // Ubah flex menjadi grid
+    gridTemplateColumns: 'repeat(3, 1fr)',  // Menyusun 3 kolom per baris
+    gap: '20px',
+    justifyItems: 'center', // Agar item berada di tengah
+  },
+  card: {
+    width: '100%', // Pastikan lebar card mengikuti grid
+    display: 'flex',
+    flexDirection: 'column',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+    borderRadius: '8px',
+    overflow: 'hidden',
+    cursor: 'pointer',
+    backgroundColor: '#fff',
+    transition: 'transform 0.2s',
+  },
+  image: {
+    width: '100%',
+    height: '200px',
+    objectFit: 'contain',
+    display: 'block',
+    marginTop: '10px',
+  },
+  content: {
+    padding: '16px',
+  },
+  title: {
+    fontSize: '18px',
+    fontWeight: 'bold',
+    marginBottom: '8px',
+  },
+  desc: {
+    fontSize: '14px',
+    color: '#555',
+  },
+  pagination: {
+    marginTop: '30px',
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '10px',
+  },
+  pageButton: {
+    padding: '8px 14px',
+    border: '1px solid #ccc',
+    background: '#fff',
+    cursor: 'pointer',
+    borderRadius: '4px',
+  },
+  activePage: {
+    background: '#007BFF',
+    color: '#fff',
+  },
+    };
 
   return (
     <>
