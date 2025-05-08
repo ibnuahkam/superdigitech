@@ -116,7 +116,9 @@ const HeaderMenu = () => {
     <header style={styles.header}>
       <div style={styles.container}>
         <div style={styles.logo}>
+        <a href="/">
           <img src={logo} alt="Logo" style={styles.logoImg} />
+        </a>
           <h1 style={styles.title}><span style={{color:'#005499'}}>Software</span> <span style={{color:'red'}}>Solution</span></h1>
         </div>
 
