@@ -7,6 +7,8 @@ import Services from './components/services';
 import FAQ from './components/faq';
 import Footer from './layouts/footer';
 import Header from './layouts/header';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
+import BackToTop from './components/BackToTop';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
+        <FloatingWhatsApp />
+        <BackToTop />
       </div>
     </Router>
   );

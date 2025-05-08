@@ -64,6 +64,11 @@ const Footer = () => {
       fontSize: '14px',
       color: '#888',
     },
+    lokasi: {
+      color: '#ffcc00',
+      textDecoration: 'none',
+      transition: 'color 0.3s ease',
+    }
   };
 
   return (
@@ -72,23 +77,7 @@ const Footer = () => {
         <div style={styles.section}>
           <div style={styles.logo}>Superdigitech</div>
           <p>Solusi digital kreatif untuk bisnis masa depan Anda.</p>
-          <div style={styles.socialIcons}>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer">
-              <svg style={styles.icon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.2v1.9h2.2l-.4 2.9h-1.8v7A10 10 0 0 0 22 12z" />
-              </svg>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer">
-              <svg style={styles.icon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M22.46 6c-.77.35-1.5.6-2.25.7.81-.5 1.4-1.3 1.7-2.2-.76.46-1.6.8-2.5 1C18.7 4.7 17.6 4 16.3 4c-2.3 0-4.2 2-4.2 4.3 0 .3 0 .6.1.9C8 9 5.5 7.6 3.9 5.5c-.4.6-.6 1.3-.6 2 0 1.5.7 2.8 1.8 3.6-.7 0-1.3-.2-1.8-.5v.1c0 2.1 1.4 3.8 3.3 4.2-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.2 3 2.2-1.1.9-2.5 1.4-4 1.4H2c1.4.9 3 1.5 4.8 1.5 5.7 0 8.8-4.8 8.8-8.8v-.4c.6-.5 1.3-1.2 1.8-2z" />
-              </svg>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-              <svg style={styles.icon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M20.5 3h-17C2.7 3 2 3.7 2 4.5v15c0 .8.7 1.5 1.5 1.5h17c.8 0 1.5-.7 1.5-1.5v-15c0-.8-.7-1.5-1.5-1.5zM8.5 18H6V10h2.5v8zM7.3 8.9C6.5 8.9 6 8.4 6 7.7c0-.6.5-1.1 1.3-1.1s1.3.5 1.3 1.1-.6 1.2-1.3 1.2zM18 18h-2.5v-4c0-1-.4-1.7-1.3-1.7s-1.3.7-1.3 1.7v4H10v-8h2.4v1.1c.3-.5 1-1.2 2.2-1.2 1.6 0 3.4 1.1 3.4 4v4.1z" />
-              </svg>
-            </a>
-          </div>
+          <a style={styles.lokasi} href="https://www.google.com/maps/place/Mugi+Griya,+Jl.+Letjen+M.T.+Haryono,+RT.11%2FRW.5,+Tebet+Bar.,+Kec.+Tebet,+Kota+Jakarta+Selatan,+Daerah+Khusus+Ibukota+Jakarta+12810/@-6.2427272,106.8462756,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69f3bbeced094b:0xf7b1f031a924c3d!8m2!3d-6.2427272!4d106.8488505!16s%2Fg%2F11b6_h6bbb?entry=ttu&g_ep=EgoyMDI1MDUwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Lokasi</a>
         </div>
 
         <div style={styles.section}>
@@ -103,8 +92,8 @@ const Footer = () => {
 
         <div style={styles.section}>
           <h4 style={{ color: '#ffcc00' }}>Kontak</h4>
-          <p>Email: info@superdigitech.com</p>
-          <p>Telepon: +62 812-3456-7890</p>
+          <p>Email: sales@superdigitech.com</p>
+          <p>Telepon: +62 812-8118-6734</p>
           <p>Alamat: Jakarta, Indonesia</p>
         </div>
       </div>
