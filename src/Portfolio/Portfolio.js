@@ -1,25 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';  // Import Link
 import Header from '../layouts/header';
 import Footer from '../layouts/footer';
-import eo from '../img/eo.jpeg';
-import eo2 from '../img/eo2.jpeg';
-import eo3 from '../img/eo3.jpeg';
-import Slider from 'react-slick';
-
-const data = [
-  {
-    id: 1,
-    title: 'Website Event Organizer',
-    images: [eo, eo2, eo3],
-    description: 'Penyelenggaraan acara korporat profesional seperti gathering, launching, dan team building.',
-    detail: 'Website Event Organizer ini memiliki fitur Schedule Event, my dashboard, create event, serta bisa booking melalui website ini',
-  },
-];
+import data from '../data/projectData';
 
 const Portfolio = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
-  const [modalContent, setModalContent] = useState(null);
 
   const indexOfLast = currentPage * itemsPerPage;
   const indexOfFirst = indexOfLast - itemsPerPage;
@@ -62,7 +49,7 @@ const Portfolio = () => {
     image: {
       width: '100%',
       height: '200px',
-      objectFit: 'cover',  // Update this to cover to maintain aspect ratio
+      objectFit: 'contain',
       display: 'block',
     },
     content: {
@@ -94,50 +81,6 @@ const Portfolio = () => {
       background: '#007BFF',
       color: '#fff',
     },
-    modalOverlay: {
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      backgroundColor: 'rgba(0,0,0,0.5)',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      zIndex: 9999,
-    },
-    modalContent: {
-      background: '#fff',
-      padding: '20px',
-      borderRadius: '8px',
-      maxWidth: '800px',  // Larger modal for bigger image
-      width: '90%',
-    },
-    closeBtn: {
-      textAlign: 'right',
-      cursor: 'pointer',
-      fontWeight: 'bold',
-      color: '#333',
-    },
-    modalImage: {
-      width: '100%',
-      height: 'auto',
-      objectFit: 'cover',
-      borderRadius: '8px',
-      marginBottom: '20px',
-    },
-    carousel: {
-      width: '100%',
-    },
-  };
-
-  // Carousel settings
-  const carouselSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
   };
 
   return (
@@ -148,17 +91,15 @@ const Portfolio = () => {
 
         <div style={styles.grid}>
           {currentItems.map((item) => (
-            <div
-              key={item.id}
-              style={styles.card}
-              onClick={() => setModalContent(item)}
-            >
-              <img src={item.images[0]} alt={item.title} style={styles.image} />
-              <div style={styles.content}>
-                <div style={styles.title}>{item.title}</div>
-                <div style={styles.desc}>{item.description}</div>
+            <Link to={`/project/${item.slug}`} key={item.id} style={{ textDecoration: 'none' }}>
+              <div style={styles.card}>
+                <img src={item.images[0]} alt={item.title} style={styles.image} />
+                <div style={styles.content}>
+                  <div style={styles.title}>{item.title}</div>
+                  <div style={styles.desc}>{item.description}</div>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -176,31 +117,6 @@ const Portfolio = () => {
             </button>
           ))}
         </div>
-
-        {/* Modal */}
-        {modalContent && (
-          <div style={styles.modalOverlay} onClick={() => setModalContent(null)}>
-            <div style={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-              <div style={styles.closeBtn} onClick={() => setModalContent(null)}>
-                ✕
-              </div>
-              {/* Carousel in Modal */}
-              <Slider {...carouselSettings} style={styles.carousel}>
-                {modalContent.images.map((image, index) => (
-                  <div key={index}>
-                    <img
-                      src={image}
-                      alt={modalContent.title}
-                      style={styles.modalImage}
-                    />
-                  </div>
-                ))}
-              </Slider>
-              <h2>{modalContent.title}</h2>
-              <p>{modalContent.detail}</p>
-            </div>
-          </div>
-        )}
       </div>
       <Footer />
     </>
