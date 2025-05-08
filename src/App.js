@@ -4,6 +4,7 @@ import Home from './home/home';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import BackToTop from './components/BackToTop';
 import Teknologi from './teknologi/teknologi';
+import Portfolio from './Portfolio/Portfolio';
 
 // Tambahkan komponen loading
 const LoadingScreen = ({ onFinish }) => {
@@ -76,6 +77,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Technology" element={<Teknologi />} />
+            <Route path="/Portfolio" element={<Portfolio />} />
           </Routes>
           <FloatingWhatsApp />
           <BackToTop />

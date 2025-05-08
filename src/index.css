@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Targetkan default left arrow */
+.slick-prev {
+  color: black !important;  /* Ubah warna arrow kiri menjadi hitam */
+}
+
+/* Targetkan default right arrow */
+.slick-next {
+  color: black !important;  /* Ubah warna arrow kanan menjadi hitam */
+}
+
+/* Jika ingin panah menjadi lebih besar atau berbeda desain */
+.slick-prev, .slick-next {
+  font-size: 24px;  /* Ubah ukuran font jika perlu */
+}
+
