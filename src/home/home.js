@@ -102,7 +102,7 @@ const Home = () => {
     <>
       <Header />
       <section style={styles.hero}>
-        <h1 style={styles.title}>Selamat Datang di Superdigitech</h1>
+        <h1 style={styles.title}>Selamat Datang di Super<span style={{color:'#005499'}}>digi</span><span style={{color:'red'}}>tech</span></h1>
         <p style={styles.subtitle}>
           Siap Mengubah Bisnis/Organisasimu ke Era Digital? Kami bantu dengan ERP, Website, Mobile Apps, Dashboard dan lainnya.
         </p>

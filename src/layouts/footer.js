@@ -22,7 +22,6 @@ const Footer = () => {
     logo: {
       fontSize: '24px',
       fontWeight: 'bold',
-      color: '#ffcc00',
       marginBottom: '10px',
     },
     linkList: {
@@ -68,6 +67,7 @@ const Footer = () => {
       color: '#ffcc00',
       textDecoration: 'none',
       transition: 'color 0.3s ease',
+      fontWeight: 'bold',
     }
   };
 
@@ -75,7 +75,7 @@ const Footer = () => {
     <footer style={styles.footer}>
       <div style={styles.container}>
         <div style={styles.section}>
-          <div style={styles.logo}>Superdigitech</div>
+          <div style={styles.logo}>Super<span style={{color:'#005499'}}>digi</span><span style={{color:'red'}}>tech</span></div>
           <p>Solusi digital kreatif untuk bisnis masa depan Anda.</p>
           <a style={styles.lokasi} href="https://www.google.com/maps/place/Mugi+Griya,+Jl.+Letjen+M.T.+Haryono,+RT.11%2FRW.5,+Tebet+Bar.,+Kec.+Tebet,+Kota+Jakarta+Selatan,+Daerah+Khusus+Ibukota+Jakarta+12810/@-6.2427272,106.8462756,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69f3bbeced094b:0xf7b1f031a924c3d!8m2!3d-6.2427272!4d106.8488505!16s%2Fg%2F11b6_h6bbb?entry=ttu&g_ep=EgoyMDI1MDUwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Lokasi</a>
         </div>

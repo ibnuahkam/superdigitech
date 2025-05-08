@@ -59,7 +59,7 @@ export default function About() {
 
         {/* Right side: About Content */}
         <div style={styles.content}>
-          <h1 style={styles.heading}>Tentang Superdigitech</h1>
+          <h1 style={styles.heading}>Tentang Super<span style={{color:'#005499'}}>digi</span><span style={{color:'red'}}>tech</span></h1>
           <p style={styles.paragraph}>
             Superdigitech adalah sebuah perusahaan yang berfokus pada integrasi teknologi dan solusi digital untuk 
             mengatasi tantangan operasional serta membantu mencapai tujuan bisnis klien kami. Kami hadir sebagai 
