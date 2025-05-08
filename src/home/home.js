@@ -10,6 +10,8 @@ import Footer from '../layouts/footer';
 const Home = () => {
   const [animate, setAnimate] = useState(false);
   const [titleAnimate, setTitleAnimate] = useState(false);
+  const phoneNumber = '081281186734'; // tanpa spasi atau tanda
+  const whatsappUrl = `https://wa.me/62${phoneNumber.replace(/^0/, '')}`;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -110,9 +112,9 @@ const Home = () => {
           <Link to="/portfolio">
             <button style={{ ...styles.button, ...styles.secondary }}>Lihat Portofolio</button>
           </Link>
-          <Link to="/contact">
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
             <button style={{ ...styles.button, ...styles.primary }}>Konsultasi Gratis</button>
-          </Link>
+          </a>
         </div>
       </section>
       <section style={styles.section}>
