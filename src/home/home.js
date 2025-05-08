@@ -4,6 +4,7 @@ import Header from '../layouts/header';
 import Benefits from '../components/benefits';
 import Services from '../components/services';
 import About from '../components/about';
+import Footer from '../layouts/footer';
 
 const Home = () => {
   const styles = {
@@ -91,6 +92,7 @@ const Home = () => {
       <Benefits/>
       <Services/>
       <About/>
+      <Footer/>
     </>
   );
 };
